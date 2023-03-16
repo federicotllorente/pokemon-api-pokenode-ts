@@ -69,7 +69,7 @@ export const PokemonListPage: FunctionComponent<{ isSearchPage?: boolean }> = ({
           </Typography>
         </Box>
         <Grid container spacing={2} sx={{ my: 4 }}>
-          {currentPageResults && currentPage > 0
+          {currentPageResults && currentPage > 0 && !isSearchPage
             ? currentPageResults.results?.map(renderPokemonList)
             : pokemonList?.map(renderPokemonList)
           }
